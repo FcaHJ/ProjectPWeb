@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumbling Tec</title>
+
+    <link rel="icon" href="{% static 'images/logo1.png' %}" />
+
+    <!--Css-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  </head>
+
+  <body class="body">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark" id="barra-nav">
+        <div class="container-fluid">
+          <img
+            src="{% static 'images/logo1.png' %}"
+            class="logo"
+            alt="Rumbling Tec"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle" href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  id="submenu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li>
+                    <a class="dropdown-item" href="">Pcs</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="">Camaras</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Microfonos</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="reg" href="registro.html">Registro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile" href="/perfil">Perfil</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    {% block content %} 
+    {% endblock %}
+
+    <footer class="pie-pagina">
+      <p class="fw-bold fst-italic text-light">
+          RumblingTec_CL
+          <br> Contacto: +56 9 20XX XXXX
+          <br> Correo: rumbling.teccl@gmail.com
+          <br>
+          <img src="{% static 'images/icons8-copyright-24.png' %}" alt="copyright"> RumblingTec_CL
+          <br> <a href="/terminos" class="link-light" id="terminos">Términos y condiciones</a>  
+      </p>
+  </footer>
+
+  <!--<script src="js/bootstrap.bundle.min.js"></script>-->
+
+  </body>
+</html>

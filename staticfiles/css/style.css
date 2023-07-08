@@ -1,0 +1,18 @@
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+/*BARRA DE NAVEGACION*/
+#barra-nav{
+    background-color: green;
+}
+.logo{
+    width: 50px;
+}
+/*FOOTER*/
+.pie-pagina{
+    padding: 1rem;
+    text-align: center;
+    background-color: green;
+}
