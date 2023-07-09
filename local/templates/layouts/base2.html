@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rumbling Tec</title>
+        <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" id="barra-nav">
+                <div class="container-fluid">
+                <img src="{% static 'images/logo1.png' %}" class="logo" alt="Rumbling Tec">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+
+        </header>
+
+        {% block contenido %} 
+        {% endblock %}
+
+        <footer class="pie-pagina">
+            <p class="fw-bold fst-italic text-light">
+                RumblingTec_CL
+                <br> Contacto: +56 9 20XX XXXX
+                <br> Correo: rumbling.teccl@gmail.com
+                <br>
+                <img src="{% static 'images/copyright.png' %}" alt="copyright"> RumblingTec_CL
+                <br> <a href="/terminos" class="link-light" id="terminos">Términos y condiciones</a>  
+            </p>
+        </footer>
+        
+    </body>
+</html>
