@@ -1,0 +1,44 @@
+{% load humanize %}
+<div class="alert alert-success" id="alert" role="alert">
+    <table>
+        <thead>
+            <tr>
+                <th scope="row" colspan="3" class="t-head">CARRITO DE COMPRAS</th>
+            </tr>
+            <tr>
+                <th scope="col" class="t-id">PRODUCTO</th>
+                <th scope="col" class="t-id">PRECIO</th>
+                <th scope="col" class="t-id">CANTIDAD</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if request.session.carrito.items %}
+            {% for key, value in request.session.carrito.items %}
+            <tr>
+                <td>{{value.nombre}} </td>
+                <td>${{value.acumulado | intcomma}} </td>
+                <td>{{value.cantidad}} 
+                    <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
+                    <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <tr>
+                <td colspan="3">
+                    <div>SIN PRODUCTOS</div>
+                </td>
+            </tr>
+            {% endif %}
+            <tr class="tr-total">
+                <th scope=row>Total:</th>
+                <td colspan="2">${{total_carrito | intcomma}} </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div class="row">
+        <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-success">Limpiar</a></div>
+        <div class="col-6"><a href="" class="btn btn-success">Pagar</a></div>
+    </div>
+</div>
