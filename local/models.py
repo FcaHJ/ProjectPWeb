@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Rol(models.Model):
@@ -23,9 +24,11 @@ class Category(models.Model):
         return self.name
     
 class Product(models.Model):
+    img = models.ImageField(upload_to="productos", null=True)
     name = models.CharField(max_length=70)
-    description = models.TextField(max_length=200)
+    description = models.TextField(max_length=200, blank=True)
     price = models.IntegerField()
+    stock = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
     def __str__(self):
