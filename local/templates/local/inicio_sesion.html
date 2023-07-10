@@ -2,11 +2,18 @@
 
 {% block contenido %}
 
-<div class="div-sesion">
+<div class="div-form">
     <div class="header">
         <h2>Iniciar Sesión</h2>
     </div>
-    <p>aqui va el form</p>
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+
+        <button class="boton">Iniciar Sesión</button>
+    </form>
+
 </div>
 
 {% endblock %}

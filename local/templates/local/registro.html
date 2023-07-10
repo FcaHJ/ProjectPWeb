@@ -2,15 +2,18 @@
 
 {% block contenido %}
 
-    <div class="div-registro">
+    <div class="div-form">
         <div class="header">
             <h2>Registrarse</h2>
         </div>
         <form action="" method="POST">
             {% csrf_token %}
-            {{form}}
-            {{error}}
+            {{form.as_p}}
             <button class="boton">Registrarse</button>
+            <hr>
+            <div class="link-reg">
+                <p>Tienes una cuenta? <a href="/inicio_sesion" id="link-reg">Inicia sesión</a></p>
+            </div>
         </form>
     </div>
 

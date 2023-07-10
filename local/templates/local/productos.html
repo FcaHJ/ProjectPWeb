@@ -1,5 +1,43 @@
 {% extends 'layouts/base.html' %}
+{% load humanize %}
 
 {% block content %}
-<h1>productos</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="titulo">PRODUCTOS</div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="row" id="row1">
+                    <div class="col-12">
+                        <div class="row">
+                            
+                            {% for p in productos  %}
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="img-producto">
+                                            <img src="{{ p.img.url }}" alt="{{ p.name }}" >
+                                        </div>
+                                        <div class="card-body">
+                                            <h6> {{ p.name }} </h6>
+                                            <hr>
+                                            <small> {{ p.description }} </small>
+                                            <p class="precio"> ${{ p.price | intcomma}} </p>
+                                            <a href="{% url 'Add' p.id %}" class="btn btn-success">Agregar al carrito</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                {% include 'layouts/carrito.html' %}
+            </div>
+        </div>
+    </div>
+
 {% endblock  %}
