@@ -43,37 +43,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="/nosotros">Sobre Nosotros</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle" href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Productos
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  id="submenu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="">Pcs</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="">Camaras</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Microfonos</a>
-                  </li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="/productos">Productos</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" id="salir" href="/logout">Cerrar Sesión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-log" href="/perfil_log"><img src="{% static 'images/user.png' %}" alt=""></a>
               </li>
               {% else %}
               <li class="nav-item">
@@ -82,10 +62,10 @@
               <li class="nav-item">
                 <a class="nav-link" id="sesion" href="/inicio_sesion">Inicio Sesión</a>
               </li>
-              {% endif %}
               <li class="nav-item">
                 <a class="nav-link" id="profile" href="/perfil"><img src="{% static 'images/user.png' %}" alt=""></a>
               </li>
+              {% endif %}
             </ul>
           </div>
         </div>
