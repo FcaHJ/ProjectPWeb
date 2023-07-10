@@ -4,6 +4,7 @@ body{
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
+
 /*BARRA DE NAVEGACION*/
 #barra-nav{
     background-color: green;
@@ -21,10 +22,37 @@ body{
 }
 /*INICIO*/
 .index-content{
-    margin: 1rem;
+    margin: 3rem 6rem 6rem 6rem;
+    padding: 1rem;
+}
+.j{
+    margin-top: 4rem;
+    background-color: gainsboro;
+    min-height: 10rem;
+}
+.link{
+    padding-bottom: 4rem;
+}
+.link-index{
+    padding: 1rem;
+    color: green;
+    border: 1px dashed green;
+    border-radius: 3rem;
+    font-weight: 800;
+}
+.link-index:hover{
+    color: rgb(5, 63, 5);
+}
+.comentarios{
+    display: block;
+    margin: auto;
+    background-color: gainsboro;
+    padding: 2rem;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 /*REGISTRO*/
-.div-registro{
+.div-form{
     width: 40rem;
     display: block;
     margin: auto;
@@ -36,6 +64,15 @@ body{
 }
 form{
     padding: 1rem;
+    margin: 2rem;
+}
+form p{
+    display: block;
+    padding: 5px;
+}
+form input{
+    display: block;
+    width: 100%;
 }
 .header{
     padding: 10px;
@@ -43,14 +80,25 @@ form{
     background-color: rgb(132, 240, 132);
     border-radius: 1rem 1rem 0 0 ;
 }
+.error{
+    color: red;
+    background-color: lightcoral;
+    padding: 1rem;
+}
 .boton{
     display: block;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 10px;
     background-color: green;
     color: white;
     padding: 10px;
     border-radius: 10px;
+}
+.link-reg{
+    text-align: center;
+}
+#link-reg{
+    color: green;
 }
 /*PERFIL*/
 .profile-content{
@@ -70,10 +118,76 @@ form{
 .datos{
     margin: 12px;
 }
+.links{
+    text-align: center;
+    margin: 2rem;
+}
+.link-perfil{
+    color: green;
+    padding: 2rem;
+    font-size: x-large;
+}
+.link-perfil:hover{
+    color: rgb(5, 63, 5);
+    padding: 2rem;
+    font-size: xx-large;
+}
 .info{
     padding: 4px;
     margin-bottom: 10px;
     border: 1px dashed gray;
+}
+/*NOSOTROS*/
+.div-nosotros{
+    display: block;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: 90%;
+    padding: 4rem;
+    box-sizing: border-box;
+}
+/*PRODUCTOS*/
+.container{
+    flex-direction: row, row-reverse, column, column-reverse;
+}
+#titulo{
+    background: palegreen;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 800;
+}
+#row1{
+    padding: 10px 0;
+}
+.card{
+    margin: 5px 0;
+    height: 18rem;
+}
+.card img{
+    width: 100%;
+    height: 10rem;
+}
+.precio{
+    font-weight: 600;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+/*CARRITO*/
+#alert{
+    margin-top: 20px;
+}
+.t-head{
+    text-align: center;
+    background-color: palegreen;
+}
+.t-id{
+    padding: 15px;
+}
+.tr-total{
+    padding-top: 10px;
 }
 /*TERMINOS*/
 .terms{
@@ -90,4 +204,5 @@ form{
     padding: 1rem;
     text-align: center;
     background-color: green;
+    bottom: 0;
 }
