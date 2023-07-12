@@ -18,7 +18,9 @@ def terminos(request):
     return render(request, "local/terminos.html")
 
 def perfil_log(request):
-    return render(request, "local/profile_log.html")
+    usuario = User.objects.all()
+    
+    return render(request, "local/profile_log.html", {'usuario' : usuario})
 
 def perfil(request):
     return render(request, "local/profile.html")
